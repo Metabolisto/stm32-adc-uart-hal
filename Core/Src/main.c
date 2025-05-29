@@ -26,8 +26,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-//TEST GIT 2
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,17 +52,17 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-void USART_Send_Char(char data)     //макрос передачи символа по UART
+static void USART_Send_Char(char data)           // Sends a single character via USART1
 {
-	while (!(USART1->SR & USART_SR_TXE)); //ожидание готовности к передаче
+	while (!(USART1->SR & USART_SR_TXE));        // Wait until transmit buffer is empty
 	USART1->DR = data;
 }
 
-void USART_Send_String(const char* str) //макрос посимвольной отправки строки
+static void USART_Send_String(const char* str)   // Sends a null-terminated string via USART1
 {
 	while (*str)
 	{
-		USART_Send_Char(*str++); // ++ указатель следующего символа
+		USART_Send_Char(*str++);                 // Send next character
 	}
 }
 /* USER CODE END PFP */
@@ -106,26 +104,25 @@ int main(void)
   MX_ADC1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-uint16_t ADC;
-char STR[10];
-float U;
-
+  uint16_t ADC;
+  char STR[16];
+  float U;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_ADC_Start(&hadc1); //Включение АЦП
-	  HAL_ADC_PollForConversion(&hadc1, 10);//команда на запуск измерения
-	  ADC=HAL_ADC_GetValue(&hadc1);
-	  HAL_ADC_Stop(&hadc1);
+	  HAL_ADC_Start(&hadc1);                  // Start ADC conversion
+	  HAL_ADC_PollForConversion(&hadc1, 10);  // Wait for conversion to complete
+	  ADC=HAL_ADC_GetValue(&hadc1);           // Read ADC value
+	  HAL_ADC_Stop(&hadc1);                   // Stop ADC
 
-	  U=ADC*(3.3/4096);
-	  sprintf(STR, "%.*f", 4, U); //функция для преобразования переменной с плавающей точкой в переменную типа String
-	  USART_Send_String(STR);
-	  USART_Send_Char(0x0D);
-	  HAL_Delay(250);
+	  U=ADC*(3.3/4096);                       // Convert ADC value to voltage (assuming 3.3V reference)
+	  sprintf(STR, "%.4f", U);                // Format float to string with 4 digits after decimal point
+	  USART_Send_String(STR);                 // Send result over UART
+	  USART_Send_Char('\r');
+	  HAL_Delay(250);                         // Wait 250 ms
 
     /* USER CODE END WHILE */
 
