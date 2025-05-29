@@ -54,16 +54,16 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 static void USART_Send_Char(char data)           // Sends a single character via USART1
 {
-	while (!(USART1->SR & USART_SR_TXE));        // Wait until transmit buffer is empty
-	USART1->DR = data;
+    while (!(USART1->SR & USART_SR_TXE));        // Wait until transmit buffer is empty
+    USART1->DR = data;
 }
 
 static void USART_Send_String(const char* str)   // Sends a null-terminated string via USART1
 {
-	while (*str)
-	{
-		USART_Send_Char(*str++);                 // Send next character
-	}
+    while (*str)
+    {
+        USART_Send_Char(*str++);                 // Send next character
+    }
 }
 /* USER CODE END PFP */
 
