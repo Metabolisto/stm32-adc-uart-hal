@@ -34,15 +34,15 @@ ADC_UART_HAL/
 STM32F103C8T6 ("Blue Pill"):
 
 **PA1 (ADC1_IN1)** — аналоговый вход (подключаем к +3.3v через потенциометр 10КОм)
-**PA9 (TX)** — UART передача
+**PA9 (TX)** — UART передача (к TX преобразователя USB-UART CH340G)
 **PA10 (RX)** — UART приём *(не используется)*
 
 Преобразователь USB-UART CH340G:
-TX и GND USB-UART адаптера к PA9 и GND Blue Pill
+**TX и GND** USB-UART к **PA9 и GND** Blue Pill
 ```
-- [Монтажная схема](https:github.com/Metabolisto/stm32-adc-uart-hal/blob/main/assets/Fritzing_diagram.png)
-- [Подключение ST-LINK V2](https:github.com/Metabolisto/stm32-adc-uart-hal/blob/main/assets/ST-LINK_V2.jpg)
-- [Подключение USB-UART CH340G](https:github.com/Metabolisto/stm32-adc-uart-hal/blob/main/assets/USB-UART_CH340G.jpg)
+- [Монтажная схема](https://github.com/user-attachments/assets/857cc747-2b93-4d84-9adb-1c79ab78d19e)
+- [Подключение ST-LINK V2](https://github.com/user-attachments/assets/11cf20ef-1757-43f4-bd80-f0e9caa32841)
+- [Подключение USB-UART CH340G](https://github.com/user-attachments/assets/635f70f6-237e-441c-b5aa-54983d74e659)
 
 ## Конфигурация (из CubeMX)
 
@@ -51,7 +51,7 @@ TX и GND USB-UART адаптера к PA9 и GND Blue Pill
 | ADC1      | Single channel, Polling |
 | UART1     | 115200 baud, 8N1        |
 
-- [Конфигурация в CubeMX](https:github.com/Metabolisto/stm32-adc-uart-hal/blob/main/assets/CubeMX_Configuration.jpg)
+- [Конфигурация в CubeMX](https://github.com/user-attachments/assets/9efbe196-3f7a-48ba-95bf-639f2d71ce29)
 
 ## Зависимости
 
