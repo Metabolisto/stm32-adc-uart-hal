@@ -33,13 +33,15 @@ ADC_UART_HAL/
 
 STM32F103C8T6 ("Blue Pill"):
 
-**PA1 (ADC1_IN1)** — аналоговый вход (подключаем к +3.3v)
+**PA1 (ADC1_IN1)** — аналоговый вход (подключаем к +3.3v через потенциометр 10КОм)
 **PA9 (TX)** — UART передача
 **PA10 (RX)** — UART приём *(не используется)*
 
 Преобразователь USB-UART CH340G:
 TX и GND USB-UART адаптера к PA9 и GND Blue Pill
 Далее открой любой терминал (я использовал UART Assistant) на скорости 115200 бод, 8 датабит, 1 стопбит.
+
+- [Fritzing diagram](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/Fritzing_diagram.png)
 
 ## Конфигурация (из CubeMX)
 
@@ -61,9 +63,9 @@ TX и GND USB-UART адаптера к PA9 и GND Blue Pill
 
 ## Скриншоты & схемы
 
-- [Конфигурация в CubeMX](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/CubeMX Configuration.jpg)
-- [Подключение ST-LINK V2](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/ST-LINK V2.jpg)
-- [Подключение USB-UART CH340G](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/USB-UART CH340G.jpg)
+- [Конфигурация в CubeMX](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/CubeMX_Configuration.jpg)
+- [Подключение ST-LINK V2](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/ST-LINK_V2.jpg)
+- [Подключение USB-UART CH340G](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/USB-UART_CH340G.jpg)
 
 ## Связанные проекты
 
