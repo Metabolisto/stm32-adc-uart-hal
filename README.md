@@ -40,7 +40,7 @@ STM32F103C8T6 ("Blue Pill"):
 Преобразователь USB-UART CH340G:
 **TX и GND** USB-UART к **PA9 и GND** Blue Pill
 ```
-- [Монтажная схема](https://github.com/user-attachments/assets/857cc747-2b93-4d84-9adb-1c79ab78d19e)
+- [Монтажная схема](https://github.com/user-attachments/assets/d8eca711-790c-481c-9e2c-182399bc5016)
 - [Подключение ST-LINK V2](https://github.com/user-attachments/assets/11cf20ef-1757-43f4-bd80-f0e9caa32841)
 - [Подключение USB-UART CH340G](https://github.com/user-attachments/assets/635f70f6-237e-441c-b5aa-54983d74e659)
 
