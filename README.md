@@ -40,9 +40,9 @@ STM32F103C8T6 ("Blue Pill"):
 Преобразователь USB-UART CH340G:
 TX и GND USB-UART адаптера к PA9 и GND Blue Pill
 ```
-- [Монтажная схема](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/Fritzing_diagram.png)
-- [Подключение ST-LINK V2](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/ST-LINK_V2.jpg)
-- [Подключение USB-UART CH340G](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/USB-UART_CH340G.jpg)
+- [Монтажная схема](https:github.com/Metabolisto/stm32-adc-uart-hal/blob/main/assets/Fritzing_diagram.png)
+- [Подключение ST-LINK V2](https:github.com/Metabolisto/stm32-adc-uart-hal/blob/main/assets/ST-LINK_V2.jpg)
+- [Подключение USB-UART CH340G](https:github.com/Metabolisto/stm32-adc-uart-hal/blob/main/assets/USB-UART_CH340G.jpg)
 
 ## Конфигурация (из CubeMX)
 
@@ -51,7 +51,7 @@ TX и GND USB-UART адаптера к PA9 и GND Blue Pill
 | ADC1      | Single channel, Polling |
 | UART1     | 115200 baud, 8N1        |
 
-- [Конфигурация в CubeMX](https://github.com/Metabolisto/stm32-adc-uart-hal/assets/CubeMX_Configuration.jpg)
+- [Конфигурация в CubeMX](https:github.com/Metabolisto/stm32-adc-uart-hal/blob/main/assets/CubeMX_Configuration.jpg)
 
 ## Зависимости
 
@@ -67,4 +67,4 @@ TX и GND USB-UART адаптера к PA9 и GND Blue Pill
 
 ## Связанные проекты
 
-- [STM32 DHT11 UART](https://github.com/Metabolisto/stm32-dht11-uart) 
+- [STM32 DHT11 UART](https:github.com/Metabolisto/stm32-dht11-uart) 
