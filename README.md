@@ -67,4 +67,4 @@ STM32F103C8T6 ("Blue Pill"):
 
 ## Связанные проекты
 
-- [STM32 DHT11 UART](https:github.com/Metabolisto/stm32-dht11-uart) 
+- [STM32 DHT11 UART](https://github.com/Metabolisto/stm32_dht11_uart) 
