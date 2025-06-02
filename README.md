@@ -51,6 +51,8 @@ STM32F103C8T6 ("Blue Pill"):
 | ADC1      | Single channel, Polling |
 | UART1     | 115200 baud, 8N1        |
 
+АЦП сконфигурирован для считывания аналогового напряжения с канала ADC1_IN1 (подключенного к выводу PA1), к которому между 3,3В и GND подключен потенциометр.
+
 - [Конфигурация в CubeMX](https://github.com/user-attachments/assets/9efbe196-3f7a-48ba-95bf-639f2d71ce29)
 
 ## Зависимости
@@ -64,6 +66,14 @@ STM32F103C8T6 ("Blue Pill"):
 3. Подключить ST-Link и прошить (`Run → Debug` / `Ctrl + F11`).
 4. Подключить преобразователь USB-UART CH340G
 5. Открыть любой терминал (я использовал UART Assistant) на скорости 115200 бод, 8 датабит, 1 стопбит и наблюдать значения.
+
+### UART Output
+Values are sent over UART1 (PA9 - TX) every 500 ms. Open a terminal (e.g. UART Assistant, PuTTY) with the following settings:
+- Baud rate: 115200
+- Data bits: 8
+- Stop bit: 1
+- Parity: None
+- Line endings: CR+LF
 
 ## Связанные проекты
 
