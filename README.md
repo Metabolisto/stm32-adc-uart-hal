@@ -26,8 +26,8 @@ stm32-adc-uart-hal/
 ├── Drivers/               # Драйверы STM32 HAL
 ├── .gitignore             # Исключения Git
 ├── README.md              # Документация
-├── STM32CubeIDE/          # Конфигурация IDE и .project файлы
-└── .ioc                   # STM32CubeMX файл конфигурации
+├── STM32F103C8TX_FLASH.ld # Линкерный скрипт
+└── ADC_UART_HAL.ioc       # STM32CubeMX файл конфигурации
 ```
 ## ⚙️ Подключение
 ```
